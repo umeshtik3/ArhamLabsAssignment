@@ -19,13 +19,27 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   void initState() {
     // registrationController.userLoggedIn ? DashBoard():LoginScreen();
+    // print('HO');
+    // getLoginDetails();
+  
+
     super.initState();
   }
 
   // getLoginDetails() async {
-  //   SharedPreferences pref = await SharedPreferences.getInstance();
-  //   pref.getString('userEmailAddress');
-  //   pref.getString('userPassword');
+  //   return FutureBuilder(
+  //       future: registrationController.isInstalled(),
+  //       builder: (context, AsyncSnapshot<bool> snapshot) {
+  //         print(registrationController
+  //             .isInstalled()
+  //             .then((value) => print(value)));
+  //         Widget returnWidet;
+  //         if (true) {
+  //          Get.to(()=>DashBoard());
+  //         }
+  //         returnWidet = LoginScreen();
+  //         return returnWidet;
+  //       });
   // }
 
   @override
@@ -136,13 +150,11 @@ class _LoginScreenState extends State<LoginScreen> {
             // If the form is valid, display a snackbar. In the real world,
             // you'd often call a server or save the information in a database.
             // ignore: unnecessary_statements
- registrationController.isLogin();
- 
+            registrationController.isLogin();
+
             ScaffoldMessenger.of(context)
                 .showSnackBar(SnackBar(content: Text('Login  Data')));
           }
-         
-          
         },
         child: Icon(
           Icons.arrow_forward,
